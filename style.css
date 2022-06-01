@@ -1,9 +1,40 @@
-<style>
+
 html {
-  background-color: lightBlue;
-  
+ 	background-image: url("background.png");
+  	background-repeat: no-repeat;
+  	width: 500px;
+  	margin: 0 auto 0 auto;
+}
+.titles{
+	color: rgb(255,255,255);
+	border: 23px ridge #1C6EA4;
+	border-radius: 100px;
+	background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20,78,117) 100%); 
+	text-align: center;
+	
+
 }
 p{
-  text-align: middle;
+color: rgb(255,255,255);
 }
-</style>
+.myButton {
+	color: rgb(255, 255, 255); 
+	font-size: 18px; 
+	line-height: 50px; 
+	padding: 10px; 
+	border-radius: 50px; 
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; 
+	font-weight: normal; 
+	text-decoration: none solid rgb(161, 139, 31); 
+	font-style: normal; 
+	font-variant: small-caps; 
+	text-transform: capitalize; 
+	background-image: linear-gradient(to right, rgb(161, 139, 31) 0%, rgb(199, 170, 30) 50%, rgb(71, 61, 12) 100%); 
+	box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; 
+	border: 23px ridge rgb(161, 139, 31); 
+	display: inline-block;
+}
+.myButton:hover {
+background-image: url("background.png");
+}
+
