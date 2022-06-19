@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<head>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<title>The Ultimate uncompleted task part 2</title>
+<div class = "titles"><h1>Tutorial</h1></div>
+
+<div id = "eventTitle">Event Title</div>
+<div id="eventDescription">Event Description</div>
+<div class = "bodyText"><button id = "choice1">choice1</button></div>
+
+<div class = "bodyText"><button id = "choice2">choice2</button></div>
+<div> TODO: Jump from event to event, invent Library of event</div>
+</body>
+
+<footer> 
+
+
+  <div class = "footerText">Health: </div> 
+  <div id="hp">1</div>
+  <br>
+  <div class = "footerText">Wealth: </div> 
+  <div id="money">0</div>
+
+</footer>
+
+<script>
+
+
+function startGame(){
+  window.location.href= "index.html";
+}
+choice2.onclick = startGame;
+choice1.onclick = function varyElement(){
+  document.getElementById("hp").innerHTML = (parseInt(document.getElementById("hp").innerHTML) + 1).toString();
+}
+</script>
