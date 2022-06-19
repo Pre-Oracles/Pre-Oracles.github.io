@@ -8,18 +8,27 @@
 
 <title>The Ultimate uncompleted task</title>
 <div class = "titles"><h1>To Jerusalem</h1></div>
-<p>Hello, this is just a project i am working on to practice my css html skill.
+<p class ="bodyText">Hello, this is just a project i am working on to practice my css html skill.
 
   The ultimate purpose is to tell a imagary world that i created. It was inpspired books, games, movie about medieval times.
   There really isn't a point to all of these. I am not even sure why you are here.</p>
 
-<a href = "https://www.google.com/"  >Characters</a>
+
 
 <br>
-<a href = "https://www.google.com/" >TimeLine</a>
- 
-<button class = "myButton" > start Game! </button>
+<a href = "plan.html" >TimeLine</a>
+<br>
+<button class = "bodyText" id = "startButton">start Game!</button>
   
 </body>
 
+<script>
+
+function startGame(){
+  window.location.href= "game.html";
+}
+
+
+startButton.onclick = startGame;
+</script>
 

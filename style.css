@@ -1,29 +1,60 @@
 
 html {
- 	background-image: url("background.png");
-  	background-repeat: no-repeat;
-  	width: 500px;
-  	margin: 0 auto 0 auto;
+ 	/*background-image: url("background.png");
+
+	  width: 100%;
+	  height: 100%;*/
+	margin: 0 auto 0 auto;
+	
+	font-family: "Times New Roman", Times, serif;
 }
 .titles{
-	color: rgb(255,255,255);
-	border: 23px ridge #1C6EA4;
-	border-radius: 100px;
-	background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20,78,117) 100%); 
+	color: rgb(0,0,0);
+	font-size:24px;
+	/*
+	border: 9px solid rgba(85,84,17,0.49);
+	background: #4D500E;
+	background: -moz-radial-gradient(center, #4D500E 0%, #919C0B 59%, #B2B610 100%);
+	background: -webkit-radial-gradient(center, #4D500E 0%, #919C0B 59%, #B2B610 100%);
+	background: radial-gradient(ellipse at center, #4D500E 0%, #919C0B 59%, #B2B610 100%);
+	border-radius: 10px;*/
 	text-align: center;
 	
+}
+body{
+	min-height: 95vh;
+    display: flex;
+    flex-direction: column;
+	font-family: cursive;
+	font-size: 18px;
+	letter-spacing: -0.4px;
+	word-spacing: 0px;
+	color: #000000;
+	font-weight: normal;
+	text-decoration: none;
+	font-style: normal;
+	font-variant: small-caps;
+	background-image: url("paper.jpeg");
+	background-size: cover;
+	margin-top: 30px;
+	
 
+	text-align: center;
 }
-p{
-color: rgb(255,255,255);
+.bodyText{
+	
+	text-align: center;
+	width:60%;
+	margin: 0px auto
+    
 }
-.myButton {
+
+#startButton {
 	color: rgb(255, 255, 255); 
 	font-size: 18px; 
 	line-height: 50px; 
 	padding: 10px; 
 	border-radius: 50px; 
-	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; 
 	font-weight: normal; 
 	text-decoration: none solid rgb(161, 139, 31); 
 	font-style: normal; 
@@ -33,8 +64,27 @@ color: rgb(255,255,255);
 	box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; 
 	border: 23px ridge rgb(161, 139, 31); 
 	display: inline-block;
+	
 }
-.myButton:hover {
-background-image: url("background.png");
+.footerText{
+	display: inline;
+	
 }
-
+#hp{
+	display:inline;
+	color:rgb(255,0,0);
+}
+#money{
+	display:inline;
+	color: rgb(199, 170, 30)
+}
+footer{
+	
+	font: bold;
+	font-size: 20px;
+	background-image: url("background.png");
+	margin-top: auto;
+	border: 3px solid;
+	padding-top: 50px;
+	padding-bottom: auto;
+}
