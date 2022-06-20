@@ -38,4 +38,17 @@ choice2.onclick = startGame;
 choice1.onclick = function varyElement(){
   document.getElementById("hp").innerHTML = (parseInt(document.getElementById("hp").innerHTML) + 1).toString();
 }
+
+class Event{
+  constructor(title,choice1,choice2){
+    this.title = title
+    this.choice1 = choice1
+    this.choice2 = choice2
+  }
+}
+let tEvent = new Event("This is the tutorial", "add health", "return");
+document.getElementById("eventTitle").innerHTML = tEvent.title;
+document.getElementById("choice2").innerHTML = tEvent.choice2;
+document.getElementById("choice1").innerHTML = tEvent.choice1;
+
 </script>
