@@ -1,0 +1,9 @@
+Tutorial 
+Welcome to the tutorial
+c1 continue 
+c2 back
+
+Beginning of the Journey
+An story that had spread far and wide
+c1 For the might of our lord!
+c2 Why would i bother?
