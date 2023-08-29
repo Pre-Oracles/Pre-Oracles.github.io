@@ -1,4 +1,9 @@
 
+html{
+	width: window.innerWidth;
+	height: window.innerHeight;
+
+}
 .titles{
 	color: rgb(0,0,0);
 	font-size:24px;
@@ -12,53 +17,52 @@
 	text-align: center;
 	
 }
+
+body {
+	background-image: url("resource/golden-white-marble-textured-background.jpg");
+	background-size: contain;
+	background-color: #FFFFFF;
+}
 a{
 	text-align: center;
 }
-body {
-	background-color: #4F4E68;
-  }
   .book {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: auto;
-	width: 30.5rem;
-	height: 20rem;
+	margin:auto;
+	width: 80%;
+	height: 80rem;
 	perspective: 70rem;
   }
   .cover {
-	background-color: #36354e;
+	background-image: url("resource/leather.jpeg");
+	background-size: cover;
 	transform: rotateY(0deg);
-	width: 16.25rem;
-	height: 20.5rem;
+	width: 50%;
+	height: 55%;
   }
   .page {
-	top: 0.25rem;
-	left: 0.25rem;
+    
+	top: 2%;
+	left: 3%;
+  	bottom: 2%;
 	background-color: #e9e6c4;
 	transform: rotateY(0deg);
-	width: 16rem;
-	height: 20rem;
+	width: 47%;
+	height: 50%;
 	text-align: left;
-	font-size: 16px;
+	font-size: 100%;
 	color: #777;
-	font-family: monospace;
+	
   }
-  .page::before{
-	  content: "Null, just like the content of my head";
-  }
+  
   .cover, .page {
 	position: absolute;
-	padding: 1rem;
+	padding: 3%;
 	transform-origin: 100% 0;
 	border-radius: 5px 0 0 5px;
-	box-shadow: inset 3px 0px 20px rgba(0, 0, 0, 0.2),
-	  0px 0px 15px rgba(0, 0, 0, 0.1);
+	box-shadow: inset 5px 5px 40px rgba(0, 0, 0, 0.4),
+	  0px 0px 20px rgba(0, 0, 0, 0.4);
 	box-sizing: border-box;
-  }
+}
   .cover.turn {
 	animation: bookCover 3s forwards;
   }
@@ -66,15 +70,18 @@ body {
 	animation: bookOpen 3s forwards;
   }
   .page:nth-of-type(1) {
-	animation-delay: 0.05s;
+	animation-delay: 0.3s;
   }
   .page:nth-of-type(2) {
-	animation-delay: 0.33s
+	animation-delay: 0.7s
   }
   .page:nth-of-type(3) {
-	animation-delay: 0.66s;
+	animation-delay: 1s;
   }
-  
+  .page:nth-of-type(4) {
+	animation: bookOpen150deg 3s forwards;
+	animation-delay: 0.99s;
+  }
   @keyframes bookOpen {
 	30% { z-index: 999 }
 	100% {  transform: rotateY(180deg);
@@ -95,22 +102,4 @@ body {
 	100% {  transform: rotateY(55deg);
 	  z-index: 999;}
   }
-  @keyframes bookOpen30deg {
-	50% { z-index: 999 }
-	100% {  transform: rotateY(30deg);
-	  z-index: 999;}
-  }
-
-
-  /*.page:nth-of-type(4) {
-	animation: bookOpen150deg 3s forwards;
-	animation-delay: 0.99s;
-  }
-  .page:nth-of-type(5) {
-	animation: bookOpen30deg 3s forwards;
-	animation-delay: 1.2s;
-  }
-  .page:nth-of-type(6) {
-	animation: bookOpen55deg 3s forwards;
-	animation-delay: 1.25s;
-  }*/
+  
