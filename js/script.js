@@ -17,3 +17,5 @@ document.addEventListener('keydown', (e) => {
 
 // Set the initial slide to be active
 slides[currentSlide].classList.add('active');
+
+
