@@ -15,7 +15,30 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Set the initial slide to be active
+
 slides[currentSlide].classList.add('active');
 
+let touchstartX = 0;
+let touchendX = 0;
+
+document.addEventListener('touchstart', (e) => {
+    touchstartX = e.changedTouches[0].screenX;
+});
+
+document.addEventListener('touchend', (e) => {
+    touchendX = e.changedTouches[0].screenX;
+    handleGesture();
+});
+
+function handleGesture() {
+    if (touchendX < touchstartX) {
+        // Swipe left (move to next slide)
+        moveToSlide(currentSlide + 1);
+    }
+
+    if (touchendX > touchstartX) {
+        // Swipe right (move to previous slide)
+        moveToSlide(currentSlide - 1);
+    }
+}
 
