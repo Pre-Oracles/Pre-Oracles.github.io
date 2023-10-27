@@ -6,7 +6,7 @@ function showSlide(slideIndex) {
     slides[slideIndex].classList.add('active');
     currentSlide = slideIndex;
 }
-
+/*
 document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowUp' && currentSlide > 0) {
         showSlide(currentSlide - 1);
@@ -14,9 +14,9 @@ document.addEventListener('keydown', (e) => {
         showSlide(currentSlide + 1);
     }
 });
+*/
 
 
-slides[currentSlide].classList.add('active');
 
 let touchstartX = 0;
 let touchendX = 0;
@@ -42,3 +42,4 @@ function handleGesture() {
     }
 }
 
+slides[currentSlide].classList.add('active');
