@@ -1,34 +1,28 @@
 const slides = document.querySelectorAll('.slide');
 let currentSlide = 0;
-let isNavigating = false; // Flag to prevent rapid navigation
 
-document.addEventListener('touchstart', (e) => {
-    if (isNavigating) return; // Ignore touch events while navigating
+
+
+document.addEventListener('click', function handleClick(event) {
+    if (isNavigating) return; // Ignore clicks while navigating
     isNavigating = true;
 
-    const touchstartY = e.changedTouches[0].screenY;
+    setTimeout(() => {
+        const tapY = event.clientY;
 
-    document.addEventListener('touchend', function touchEndHandler(e) {
-        document.removeEventListener('touchend', touchEndHandler);
-
-        const touchendY = e.changedTouches[0].screenY;
-
-        // Determine the direction of the tap
-        const deltaY = touchendY - touchstartY;
-
-        if (deltaY < -50 && currentSlide > 0) {
-            // Swipe up (move to previous slide)
+        if (tapY < window.innerHeight / 2 && currentSlide > 0) {
+            // Tap on the upper half of the screen (move to previous slide)
             showSlide(currentSlide - 1);
-        } else if (deltaY > 50 && currentSlide < slides.length - 1) {
-            // Swipe down (move to next slide)
+        } else if (tapY >= window.innerHeight / 2 && currentSlide < slides.length - 1) {
+            // Tap on the lower half of the screen (move to next slide)
             showSlide(currentSlide + 1);
         }
 
         isNavigating = false; // Reset the navigation flag
-    });
+    }, 300); // Adjust the timeout as needed to control the delay
 });
 
-// Rest of your JavaScript code
+
 
 slides[currentSlide].classList.add('active');
 
