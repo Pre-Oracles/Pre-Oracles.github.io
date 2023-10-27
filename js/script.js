@@ -1,11 +1,7 @@
 const slides = document.querySelectorAll('.slide');
 let currentSlide = 0;
 
-function showSlide(slideIndex) {
-    slides[currentSlide].classList.remove('active');
-    slides[slideIndex].classList.add('active');
-    currentSlide = slideIndex;
-}
+
 /*
 document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowUp' && currentSlide > 0) {
@@ -15,8 +11,6 @@ document.addEventListener('keydown', (e) => {
     }
 });
 */
-
-
 
 let touchstartX = 0;
 let touchendX = 0;
@@ -33,13 +27,19 @@ document.addEventListener('touchend', (e) => {
 function handleGesture() {
     if (touchendX < touchstartX) {
         // Swipe left (move to next slide)
-        moveToSlide(currentSlide + 1);
+        showSlide(currentSlide + 1);
     }
 
     if (touchendX > touchstartX) {
         // Swipe right (move to previous slide)
-        moveToSlide(currentSlide - 1);
+        showSlide(currentSlide - 1);
     }
 }
 
 slides[currentSlide].classList.add('active');
+
+function showSlide(slideIndex) {
+    slides[currentSlide].classList.remove('active');
+    slides[slideIndex].classList.add('active');
+    currentSlide = slideIndex;
+}
