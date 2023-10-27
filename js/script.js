@@ -1,16 +1,6 @@
 const slides = document.querySelectorAll('.slide');
 let currentSlide = 0;
-
-
-
-
-
-let touchstartY = 0;
-let touchendY = 0;
-
-document.addEventListener('touchstart', (e) => {
-    touchstartY = e.changedTouches[0].screenY;
-});
+let isNavigating = false; // Flag to prevent rapid navigation
 
 document.addEventListener('touchstart', (e) => {
     if (isNavigating) return; // Ignore touch events while navigating
@@ -37,6 +27,8 @@ document.addEventListener('touchstart', (e) => {
         isNavigating = false; // Reset the navigation flag
     });
 });
+
+// Rest of your JavaScript code
 
 slides[currentSlide].classList.add('active');
 
