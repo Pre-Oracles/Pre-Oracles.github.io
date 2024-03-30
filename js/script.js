@@ -6,7 +6,7 @@ let currentSlide = 0;
 document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowUp' && currentSlide > 0) {
         showSlide(currentSlide - 1);
-    } else if (e.key === 'ArrowDown' && currentSlide < slides.length - 1) {
+    } else if (e.key === 'ArrowDown' ) {
         showSlide(currentSlide + 1);
     }
 });
@@ -39,6 +39,10 @@ function handleGesture() {
 slides[currentSlide].classList.add('active');
 
 function showSlide(slideIndex) {
+    if (slideIndex >= slides.length) {
+        location.href = 'https://pre-oracles.github.io';
+    
+    }
     slides[currentSlide].classList.remove('active');
     slides[slideIndex].classList.add('active');
     currentSlide = slideIndex;
