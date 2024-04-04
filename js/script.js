@@ -40,7 +40,7 @@ slides[currentSlide].classList.add('active');
 
 function showSlide(slideIndex) {
     if (slideIndex >= slides.length) {
-        location.href = 'https://pre-oracles.github.io';
+        location.href = 'https://pre-oracles.github.io/mainPages.html';
     
     }
     slides[currentSlide].classList.remove('active');
