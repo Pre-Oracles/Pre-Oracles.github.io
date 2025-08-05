@@ -40,10 +40,36 @@ slides[currentSlide].classList.add('active');
 
 function showSlide(slideIndex) {
     if (slideIndex >= slides.length) {
-        location.href = 'https://pre-oracles.github.io/mainPages.html';
+        location.href = 'mainPage.html';
     
     }
     slides[currentSlide].classList.remove('active');
     slides[slideIndex].classList.add('active');
     currentSlide = slideIndex;
 }
+
+function updateAgeCounter() {
+    // Set your birthdate here (YYYY-MM-DDTHH:MM:SSZ in UTC)
+    const birthDate = new Date('2007-03-02T12:21:11Z');
+    const now = new Date();
+    let diff = Math.floor((now - birthDate) / 1000);
+
+    const years = Math.floor(diff / (365.25 * 24 * 60 * 60));
+    diff -= years * 365.25 * 24 * 60 * 60;
+
+    const days = Math.floor(diff / (24 * 60 * 60));
+    diff -= days * 24 * 60 * 60;
+
+    const hours = Math.floor(diff / (60 * 60));
+    diff -= hours * 60 * 60;
+
+    const minutes = Math.floor(diff / 60);
+    const seconds = diff - minutes * 60;
+
+    const ageSpan = document.getElementById('age');
+    if (ageSpan) {
+        ageSpan.textContent = `${years} years, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+    }
+}
+setInterval(updateAgeCounter, 1000);
+updateAgeCounter();
