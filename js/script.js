@@ -40,7 +40,7 @@ slides[currentSlide].classList.add('active');
 
 function showSlide(slideIndex) {
     if (slideIndex >= slides.length) {
-        location.href = 'mainPage.html';
+        window.location.href = './main-section/';
     
     }
     slides[currentSlide].classList.remove('active');
