@@ -3,7 +3,7 @@ import React from 'react';
 const MainPage = ({ sampleData, setCurrentPage }) => (
   <div className="min-h-screen bg-white text-black p-4 md:p-8">
     <div className="max-w-6xl mx-auto">
-      <h1 className="text-4xl md:text-6xl font-bold mb-12 text-center">Welcome</h1>
+      <h1 className="text-4xl md:text-6xl font-bold mb-12 text-center">Welcome to Gao's Directory</h1>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
         {Object.entries(sampleData).map(([key, data]) => (
