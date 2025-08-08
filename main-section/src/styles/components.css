@@ -1,0 +1,261 @@
+/* Component Styles - styles/components.css */
+
+/* Buttons */
+.btn-back {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid black;
+  background: white;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.btn-back:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Cards */
+.card {
+  cursor: pointer;
+  border: 2px solid black;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background-color: black;
+  color: white;
+}
+
+.card-image {
+  aspect-ratio: 16/9;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.card:hover .card-image img {
+  filter: invert(1);
+}
+
+.card-description {
+  font-size: 0.875rem;
+  opacity: 0.7;
+}
+
+/* Project Cards */
+.project-card {
+  border: 2px solid black;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  background-color: #f8f8f8;
+}
+
+/* Tags */
+.tag {
+  background-color: black;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  display: inline-block;
+}
+
+.tag-white {
+  border: 2px solid black;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.tag-white:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Date badges */
+.date-badge {
+  font-size: 0.875rem;
+  background-color: black;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .date-badge {
+    margin-top: 0;
+  }
+}
+
+/* Article styles */
+.article {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 2rem;
+}
+
+.article-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .article-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+/* Quote styles */
+.quote-block {
+  border-left: 4px solid black;
+  padding-left: 2rem;
+}
+
+.quote-text {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  font-style: italic;
+  line-height: 1.625;
+}
+
+@media (min-width: 768px) {
+  .quote-text {
+    font-size: 1.875rem;
+  }
+}
+
+.quote-author {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+/* Resume specific styles */
+.experience-item {
+  margin-bottom: 2rem;
+}
+
+.experience-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .experience-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.experience-role {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.experience-period {
+  font-size: 0.875rem;
+  background-color: black;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .experience-period {
+    margin-top: 0;
+  }
+}
+
+/* Skills grid */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Project Image Styles */
+.project-image-container {
+  position: relative;
+  aspect-ratio: 16/9;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.image-nav-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.25rem;
+  transition: opacity 0.3s ease;
+}
+
+.image-nav-btn:hover {
+  opacity: 0.7;
+}
+
+.image-counter {
+  font-size: 0.875rem;
+}
+
+/* Project Links */
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid black;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+}
+
+.project-link:hover {
+  background-color: black;
+  color: white;
+}

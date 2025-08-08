@@ -2,24 +2,25 @@ import React from 'react';
 import BackButton from './BackButton';
 
 const ProjectsPage = ({ data, setCurrentPage }) => (
-  <div className="min-h-screen bg-white text-black p-4 md:p-8">
-    <div className="max-w-4xl mx-auto">
+  <div className="page-container">
+    <div className="content-wrapper-narrow">
       <BackButton setCurrentPage={setCurrentPage} />
 
-      <h1 className="text-4xl font-bold mb-12">Things That I've Made</h1>
+      <h1 className="title-page">Things That I've Made</h1>
 
-      <div className="grid gap-8">
+      <div className="grid-1col">
         {data.content.map((project, index) => (
-          <div key={index} className="border-2 border-black p-6 hover:bg-gray-50 transition-all duration-300">
-            <h2 className="text-2xl font-bold mb-3">{project.name}</h2>
-            <div className="flex flex-wrap gap-2 mb-4">
+          <div key={index} className="project-card">
+            <img src={"https://via.placeholder.com/400x225/f8f8f8/333?text=Resume+Preview"}></img>
+            <h2 className="title-card">{project.name}</h2>
+            <div className="flex flex-wrap gap-small mb-medium">
               {project.tech.split(', ').map((tech, techIndex) => (
-                <span key={techIndex} className="bg-black text-white px-3 py-1 text-sm">
+                <span key={techIndex} className="tag">
                   {tech}
                 </span>
               ))}
             </div>
-            <p className="text-gray-600">{project.description}</p>
+            <p className="text-gray">{project.description}</p>
           </div>
         ))}
       </div>

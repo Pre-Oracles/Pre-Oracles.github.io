@@ -2,19 +2,19 @@ import React from 'react';
 import BackButton from './BackButton';
 
 const QuotesPage = ({ data, setCurrentPage }) => (
-  <div className="min-h-screen bg-white text-black p-4 md:p-8">
-    <div className="max-w-4xl mx-auto">
+  <div className="page-container">
+    <div className="content-wrapper-narrow">
       <BackButton setCurrentPage={setCurrentPage} />
 
-      <h1 className="text-4xl font-bold mb-12">Quotes</h1>
+      <h1 className="title-page">Quotes</h1>
 
-      <div className="space-y-12">
+      <div className="space-y-large">
         {data.content.map((item, index) => (
-          <blockquote key={index} className="border-l-4 border-black pl-8">
-            <p className="text-2xl md:text-3xl font-light mb-4 italic leading-relaxed">
+          <blockquote key={index} className="quote-block">
+            <p className="quote-text">
               "{item.quote}"
             </p>
-            <cite className="text-lg font-semibold">— {item.author}</cite>
+            <cite className="quote-author">— {item.author}</cite>
           </blockquote>
         ))}
       </div>
