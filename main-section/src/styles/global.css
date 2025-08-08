@@ -1,0 +1,201 @@
+/* Global Styles - styles/global.css */
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  line-height: 1.6;
+}
+
+/* Layout Classes */
+.page-container {
+  min-height: 100vh;
+  background-color: white;
+  color: black;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .page-container {
+    padding: 2rem;
+  }
+}
+
+.content-wrapper {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.content-wrapper-narrow {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+/* Typography */
+.title-main {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .title-main {
+    font-size: 3.75rem;
+  }
+}
+
+.title-page {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+.title-section {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid black;
+  padding-bottom: 0.5rem;
+}
+
+.title-card {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.title-article {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Grid and Layout */
+.grid-2col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid-2col {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+}
+
+.grid-1col {
+  display: grid;
+  gap: 2rem;
+}
+
+/* Spacing */
+.space-y-large > * + * {
+  margin-top: 3rem;
+}
+
+.space-y-medium > * + * {
+  margin-top: 2rem;
+}
+
+.space-y-small > * + * {
+  margin-top: 1rem;
+}
+
+.mb-small { margin-bottom: 0.5rem; }
+.mb-medium { margin-bottom: 1rem; }
+.mb-large { margin-bottom: 2rem; }
+
+/* Flex utilities */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.space-x-small > * + * {
+  margin-left: 0.5rem;
+}
+
+.gap-small {
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .md-flex-row {
+    flex-direction: row;
+  }
+  
+  .md-justify-between {
+    justify-content: space-between;
+  }
+  
+  .md-items-start {
+    align-items: flex-start;
+  }
+}
+
+/* Text styles */
+.text-gray {
+  color: #666;
+}
+
+.text-small {
+  font-size: 0.875rem;
+}
+
+.text-medium {
+  font-size: 1rem;
+}
+
+.text-large {
+  font-size: 1.25rem;
+}
+
+.text-xl {
+  font-size: 1.5rem;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.opacity-70 {
+  opacity: 0.7;
+}
+
+.leading-relaxed {
+  line-height: 1.225;
+}

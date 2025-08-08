@@ -5,6 +5,8 @@ import ProjectsPage from './components/ProjectsPage';
 import ThoughtsPage from './components/ThoughtsPage';
 import QuotesPage from './components/QuotesPage';
 import { sampleData } from './data/sampleData';
+import './styles/global.css';
+import './styles/components.css';
 
 const PersonalWebsiteSection = () => {
   const [currentPage, setCurrentPage] = useState('main');
