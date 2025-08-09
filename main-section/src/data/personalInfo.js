@@ -29,10 +29,14 @@ export const sampleData = {
         name: "3D Fractal Simulator", 
         tech: "Unity, C#, *Math", 
         description: "Full 3 Dimensional Julia Set Generator and Simulator",
-        image: ".julia_set.png"
+        image: process.env.PUBLIC_URL + "/resources/julia_set.png",
+        images: [
+          process.env.PUBLIC_URL + "/resources/julia_set1.png",
+          process.env.PUBLIC_URL + "/resources/julia_set2.png"
+        ]
       }
     ],
-    previewImage: "/resources/julia_set.png"
+    previewImage: process.env.PUBLIC_URL + "/resources/julia_set.png"
   },
   thoughts: {
     title: "Thoughts",
