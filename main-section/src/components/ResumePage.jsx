@@ -37,9 +37,14 @@ const ResumePage = ({ data, setCurrentPage }) => (
         <section>
           <h2 className="title-section">Education</h2>
           <div>
-            <h3 className="text-xl font-semibold">{data.content.education.degree}</h3>
-            <p className="font-medium">{data.content.education.institution}</p>
-            <p className="text-gray">{data.content.education.year}</p>
+            {data.content.education.map((study_experience, index) => (
+            <div key={index} className="experience-item">
+              <h3 className="text-xl font-semibold">{study_experience.degree}</h3>
+              <p className="font-medium">{study_experience.institution}</p>
+              <p className="text-gray">{study_experience.year}</p>
+            </div>
+            ))}
+            
           </div>
         </section>
       </div>

@@ -14,16 +14,16 @@ const MainPage = ({ sampleData, setCurrentPage }) => (
           >
             <div className="card-image">
               <img 
-                src={data.previewImage} 
+                src={process.env.PUBLIC_URL + data.previewImage} 
                 alt={`${data.title} preview`}
               />
             </div>
             <h2 className="title-card">{data.title}</h2>
             <p className="card-description">
-              {key === 'resume' && "Professional experience and skills"}
-              {key === 'projects' && "Creative projects and technical work"}
-              {key === 'thoughts' && "Personal reflections and insights"}
-              {key === 'quotes' && "Inspiring words and wisdom"}
+              {key === 'resume' && "My professional experience and skills"}
+              {key === 'projects' && "Creative projects funded by my relentless mind"}
+              {key === 'thoughts' && "Idea worth saying - maybe worth reading"}
+              {key === 'quotes' && "The good and the bad"}
             </p>
           </div>
         ))}
