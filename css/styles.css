@@ -53,6 +53,10 @@ p {
     margin-bottom: 2px;
 }
 
+.bold {
+    font-weight: bolder;
+}
+
 .tiny {
     font-size:10px;
 }
