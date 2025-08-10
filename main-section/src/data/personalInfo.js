@@ -57,6 +57,13 @@ export const sampleData = {
           "/resources/julia_set1.png",
           "/resources/julia_set2.png"
         ]
+      },
+
+      { 
+        name: "2D Pixel Plateformer", 
+        tech: "Godot, GDscript", 
+        description: "A self drawn, self coded 2D platformer",
+        image:"/resources/godot_game.png",
       }
     ],
     previewImage: "/resources/julia_set.png"
