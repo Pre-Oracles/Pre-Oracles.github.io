@@ -4,23 +4,45 @@ export const sampleData = {
     content: {
       experience: [
         { 
+          role: "Full-Stack Developer", 
+          company: "self-employed", 
+          period: "2020-Now", 
+          description: "Learn & Utilize new and interesting skills out there, combining them into projects that can been seen in the \"things i've made section\"" 
+        },
+        { 
           role: "Intern", 
           company: "Climind", 
           period: "2023-2024", 
-          description: "Developed web applications using React and Node.js" 
+          description: "Developed scripts to obtain open & high value data for the Climind AI." 
+        },
+        { 
+          role: "Front end developer", 
+          company: "self-employed", 
+          period: "2022", 
+          description: "Made this very website by myself" 
         }
       ],
-      skills: ["JavaScript", "React", "Node.js", "Python", "CSS", "HTML"],
+      skills: ["JavaScript", "React", "Node.js", "Python", "CSS", "HTML", "(Native) Chinese", "(Work Professiency) Tamil"],
       education: [
         { 
+          degree: "Math-CS undergraduate degree", 
+          institution: "UCSD", 
+          year: "2025-2029" 
+        },
+        { 
           degree: "A-Levels", 
-          institution: "St Pauls", 
-          year: "2025" 
+          institution: "St Pauls School", 
+          year: "2023-2025" 
+        },
+        {
+          degree: "GCSEs",
+          institution: "Caterham School",
+          year: "2020-2023"
         }
-      ],
+      ]
       
     },
-    previewImage: "data:image/svg+xml,%3Csvg width='200' height='120' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='200' height='120' fill='%23f8f8f8'/%3E%3Ctext x='100' y='60' text-anchor='middle' fill='%23333' font-family='Arial' font-size='14'%3EResume Preview%3C/text%3E%3C/svg%3E"
+    previewImage: "/resources/resume.jpg"
   },
   projects: {
     title: "Things That I've Made",
@@ -29,14 +51,15 @@ export const sampleData = {
         name: "3D Fractal Simulator", 
         tech: "Unity, C#, *Math", 
         description: "Full 3 Dimensional Julia Set Generator and Simulator",
-        image: process.env.PUBLIC_URL + "/resources/julia_set.png",
+        image:"/resources/julia_set.png",
         images: [
-          process.env.PUBLIC_URL + "/resources/julia_set1.png",
-          process.env.PUBLIC_URL + "/resources/julia_set2.png"
+          "/resources/julia_set.png",
+          "/resources/julia_set1.png",
+          "/resources/julia_set2.png"
         ]
       }
     ],
-    previewImage: process.env.PUBLIC_URL + "/resources/julia_set.png"
+    previewImage: "/resources/julia_set.png"
   },
   thoughts: {
     title: "Thoughts",
@@ -44,18 +67,23 @@ export const sampleData = {
       { 
         title: "The Future of AI Agents", 
         date: "2024-08-01", 
-        excerpt: "Not just Transformers" 
+        excerpt: "It is not just going to be transformers, because whenever a technology is only being slightly refined under heavy competition, it suggest the end is near for it (even if it takes 50 years), new paradigms, new technology will emerge eventually and overtake transformers like how they overtook the CNNs and their predecessors. " 
       }
     ],
-    previewImage: "data:image/svg+xml,%3Csvg width='200' height='120' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='200' height='120' fill='%23f8f8f8'/%3E%3Ctext x='100' y='60' text-anchor='middle' fill='%23333' font-family='Arial' font-size='14'%3EThoughts Preview%3C/text%3E%3C/svg%3E"
+    previewImage: "/resources/yatsen.jpg"
   },
   quotes: {
     title: "Quotes",
     content: [
       {
-        quote: "Hammer to the Nail!", 
-        author: "me" }
+        quote: "Capital has the ability to subsume all critiques into itself. Even those who would *critique* capital end up *reinforcing* it instead...", 
+        author: "Joyce Messier, from the video game Disco Elysium (Inspired by Herbert Marcuse)" 
+      },
+      {
+        quote: "I don't see where the realism is..", 
+        author: "sutha" 
+      }
     ],
-    previewImage: "data:image/svg+xml,%3Csvg width='200' height='120' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='200' height='120' fill='%23f8f8f8'/%3E%3Ctext x='100' y='60' text-anchor='middle' fill='%23333' font-family='Arial' font-size='14'%3EQuotes Preview%3C/text%3E%3C/svg%3E"
+    previewImage: "/resources/zaporo_cossak.jpg"
   }
 };

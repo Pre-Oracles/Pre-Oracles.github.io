@@ -27,9 +27,9 @@ const ProjectsPage = ({ data, setCurrentPage }) => {
 
   const getCurrentImage = (project, projectIndex) => {
     if (project.images && project.images.length > 0) {
-      return project.images[selectedImageIndex[projectIndex] || 0];
+      return  process.env.PUBLIC_URL + project.images[selectedImageIndex[projectIndex] || 0];
     }
-    return project.image; // Fallback to single image
+    return  process.env.PUBLIC_URL + project.image; // Fallback to single image
   };
 
   return (
