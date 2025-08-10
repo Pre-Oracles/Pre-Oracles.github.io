@@ -1,8 +1,6 @@
 const slides = document.querySelectorAll('.slide');
 let currentSlide = 0;
 
-
-
 document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowUp' && currentSlide > 0) {
         showSlide(currentSlide - 1);
@@ -11,26 +9,25 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-
-let touchstartX = 0;
-let touchendX = 0;
+let touchstartY = 0;
+let touchendY = 0;
 
 document.addEventListener('touchstart', (e) => {
-    touchstartX = e.changedTouches[0].screenX;
+    touchstartY = e.changedTouches[0].screenY;
 });
 
 document.addEventListener('touchend', (e) => {
-    touchendX = e.changedTouches[0].screenX;
+    touchendY = e.changedTouches[0].screenY;
     handleGesture();
 });
 
 function handleGesture() {
-    if (touchendX < touchstartX) {
+    if (touchendY < touchstartY) {
         // Swipe left (move to next slide)
         showSlide(currentSlide + 1);
     }
 
-    if (touchendX > touchstartX) {
+    if (touchendY > touchstartY) {
         // Swipe right (move to previous slide)
         showSlide(currentSlide - 1);
     }
@@ -49,7 +46,6 @@ function showSlide(slideIndex) {
 }
 
 function updateAgeCounter() {
-    // Set your birthdate here (YYYY-MM-DDTHH:MM:SSZ in UTC)
     const birthDate = new Date('2007-03-02T12:21:11Z');
     const now = new Date();
     let diff = Math.floor((now - birthDate) / 1000);
