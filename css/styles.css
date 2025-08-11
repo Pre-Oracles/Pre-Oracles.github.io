@@ -105,7 +105,7 @@ footer{
         float: none;
         width: 100%;
         max-width: 400px;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
     
     .left, .right {
@@ -121,39 +121,27 @@ footer{
     
     h2 {
         font-size: 20px;
-        margin-bottom: 3px;
     }
     
     h3 {
         font-size: 16px;
-        margin-bottom: 2px;
     }
     
     p {
         font-size: 14px;
-        line-height: 1.2;
-        margin-top: 1px;
-        margin-bottom: 1px;
+        line-height: 1.4;
     }
     
     .slide {
         padding: 20px 20px 60px 20px;
         box-sizing: border-box;
         justify-content: center;
+        height: calc(100vh - 50px);
     }
     
     .slide:has(.row) {
         justify-content: flex-start;
         padding-top: 5vh;
-    }
-    
-    .right p {
-        line-height: 1.1;
-        margin: 0;
-    }
-    
-    .right p br + br {
-        display: none;
     }
     
     footer {
@@ -163,7 +151,7 @@ footer{
     
     main {
         height: 100vh;
-        padding-bottom: 40px;
+        padding-bottom: 0;
         box-sizing: border-box;
     }
 }
