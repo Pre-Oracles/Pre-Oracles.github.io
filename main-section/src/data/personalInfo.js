@@ -7,19 +7,13 @@ export const sampleData = {
           role: "Full-Stack Developer", 
           company: "self-employed", 
           period: "2020-Now", 
-          description: "Learn & Utilize new and interesting skills out there, combining them into projects that can been seen in the \"things i've made section\"" 
+          description: "Learn and utilize new and interesting skills out there, combining them into projects that can been seen in the \"things i've made section\"" 
         },
         { 
           role: "Intern", 
           company: "Climind", 
           period: "2023-2024", 
           description: "Developed scripts to obtain open & high value data for the Climind AI." 
-        },
-        { 
-          role: "Front end developer", 
-          company: "self-employed", 
-          period: "2022", 
-          description: "Made this very website by myself" 
         }
       ],
       skills: ["JavaScript", "React", "Node.js", "Python", "CSS", "HTML", "(Native) Chinese", "(Work Professiency) Tamil"],
@@ -58,12 +52,28 @@ export const sampleData = {
           "/resources/julia_set2.png"
         ]
       },
-
+      { 
+        name: "Political Speech Classifier", 
+        tech: "Python, Matrices", 
+        description: "Encoder-Only model which classify the enter political speech into the political party in the US.",
+        image:"/resources/political_speech.png",
+        images: [
+          "/resources/political_speech.png",
+          "/resources/political_speech1.png",
+          "/resources/political_speech2.png",
+        ]
+      },
       { 
         name: "2D Pixel Plateformer", 
         tech: "Godot, GDscript", 
         description: "A self drawn, self coded 2D platformer",
         image:"/resources/godot_game.png",
+      },
+      { 
+        name: "This very website", 
+        tech: "html, css, js, React", 
+        description: "where people can learn more about me",
+        image:"/resources/this_website.png",
       }
     ],
     previewImage: "/resources/julia_set.png"
