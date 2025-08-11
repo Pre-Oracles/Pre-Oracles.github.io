@@ -83,6 +83,12 @@ p {
 footer{
     text-align: center;
     opacity: 50%;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 5px 0;
+    z-index: 10;
 }
 
 /* Mobile responsiveness */
@@ -127,7 +133,20 @@ footer{
     }
     
     .slide {
-        padding: 20px;
+        padding: 20px 20px 60px 20px;
+        box-sizing: border-box;
+        justify-content: flex-start;
+        padding-top: 10vh;
+    }
+    
+    footer {
+        font-size: 8px;
+        padding: 3px 0;
+    }
+    
+    main {
+        height: 100vh;
+        padding-bottom: 40px;
         box-sizing: border-box;
     }
 }
