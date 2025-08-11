@@ -211,12 +211,17 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.2);
+  transition: background 0.5s ease-in-out;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem;
+}
+
+.image-nav:hover{
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .image-nav-btn {
