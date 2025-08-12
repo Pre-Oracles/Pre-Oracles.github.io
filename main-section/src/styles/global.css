@@ -50,6 +50,13 @@ body {
   text-align: center;
 }
 
+.footer {
+  font-size: 0.85rem;
+  opacity: 50%;
+  padding-top: 3rem;
+  text-align: center;
+}
+
 @media (min-width: 768px) {
   .title-main {
     font-size: 3.75rem;

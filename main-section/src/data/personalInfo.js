@@ -72,7 +72,7 @@ export const sampleData = {
       { 
         name: "This very website", 
         tech: "html, css, js, React", 
-        description: "where people can learn more about me",
+        description: "written from the very scratch, where people can learn more about me",
         image:"/resources/this_website.png",
         images: [
           "/resources/this_website.png",

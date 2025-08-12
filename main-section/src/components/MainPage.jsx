@@ -33,6 +33,11 @@ const MainPage = ({ sampleData, setCurrentPage }) => (
         ))}
       </div>
     </div>
+    <div class ="footer">
+      this page is written with React @2022 (now deprecated)
+      <br></br>
+      No rights reserved — this work by alex is free to use for any purpose.
+    </div>
   </div>
 );
 
