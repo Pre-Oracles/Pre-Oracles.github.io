@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MainPage = ({ sampleData, setCurrentPage }) => (
+const MainPage = ({ content, setCurrentPage }) => (
   <div className="page-container">
     <div className="content-wrapper">
       <h1 class = "title-main">Welcome to Gao's Directory</h1>
@@ -10,7 +10,7 @@ const MainPage = ({ sampleData, setCurrentPage }) => (
       </p>
       
       <div className="grid-2col">
-        {Object.entries(sampleData).map(([key, data]) => (
+        {Object.entries(content).map(([key, data]) => (
           <div
             key={key}
             onClick={() => setCurrentPage(key)}
