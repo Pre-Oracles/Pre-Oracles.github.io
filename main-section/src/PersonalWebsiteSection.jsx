@@ -4,7 +4,7 @@ import ResumePage from './components/ResumePage';
 import ProjectsPage from './components/ProjectsPage';
 import ThoughtsPage from './components/ThoughtsPage';
 import QuotesPage from './components/QuotesPage';
-import { sampleData } from './data/personalInfo';
+import { sampleData } from './data/content';
 import './styles/global.css';
 import './styles/components.css';
 
