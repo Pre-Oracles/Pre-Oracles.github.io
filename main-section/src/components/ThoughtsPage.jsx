@@ -4,15 +4,30 @@ import { X, Clock, Tag } from 'lucide-react';
 
 const ThoughtsPage = ({ data, setCurrentPage }) => {
   const [selectedArticle, setSelectedArticle] = useState(null);
+  const [articleContent, setArticleContent] = useState('');
+  const [loading, setLoading] = useState(false);
 
-  const openArticle = (article) => {
-    setSelectedArticle(article);
+  const openArticle = async (thoughtItem) => {
+    setLoading(true);
+    setSelectedArticle(thoughtItem);
+    
+    try {
+      // Dynamically import the article content
+      const articleModule = await thoughtItem.articleFile();
+      setArticleContent(articleModule.article.content);
+    } catch (error) {
+      console.error('Error loading article:', error);
+      setArticleContent('Error loading article content.');
+    }
+    
+    setLoading(false);
     // Prevent body scroll when modal is open
     document.body.style.overflow = 'hidden';
   };
 
   const closeArticle = () => {
     setSelectedArticle(null);
+    setArticleContent('');
     // Restore body scroll
     document.body.style.overflow = 'unset';
   };
@@ -33,6 +48,8 @@ const ThoughtsPage = ({ data, setCurrentPage }) => {
 
   // Parse markdown-like content for basic formatting
   const formatContent = (content) => {
+    if (!content) return null;
+    
     return content
       .split('\n')
       .map((line, index) => {
@@ -47,9 +64,9 @@ const ThoughtsPage = ({ data, setCurrentPage }) => {
           return <h3 key={index} className="article-h3">{line.slice(4)}</h3>;
         }
         
-        // Bold text
+        // Bold text in lists
         if (line.startsWith('- **') && line.includes('**:')) {
-          const parts = line.slice(2).split('**:');
+          const parts = line.slice(4).split('**:');
           return (
             <div key={index} className="article-list-item">
               <strong>{parts[0]}</strong>: {parts[1]}
@@ -82,7 +99,7 @@ const ThoughtsPage = ({ data, setCurrentPage }) => {
         <div className="space-y-medium">
           {data.content.map((thought, index) => (
             <article 
-              key={index} 
+              key={thought.id}
               className="thought-card"
               onClick={() => openArticle(thought)}
             >
@@ -181,7 +198,11 @@ const ThoughtsPage = ({ data, setCurrentPage }) => {
               
               {/* Article Content */}
               <div className="article-body">
-                {formatContent(selectedArticle.content)}
+                {loading ? (
+                  <div className="loading-spinner">Loading article...</div>
+                ) : (
+                  formatContent(articleContent)
+                )}
               </div>
             </div>
           </div>
