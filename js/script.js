@@ -23,12 +23,10 @@ document.addEventListener('touchend', (e) => {
 
 function handleGesture() {
     if (touchendY < touchstartY) {
-        // Swipe left (move to next slide)
         showSlide(currentSlide + 1);
     }
 
     if (touchendY > touchstartY) {
-        // Swipe right (move to previous slide)
         showSlide(currentSlide - 1);
     }
 }
@@ -38,11 +36,12 @@ slides[currentSlide].classList.add('active');
 function showSlide(slideIndex) {
     if (slideIndex >= slides.length) {
         location.href = './main-section/';
-    
     }
-    slides[currentSlide].classList.remove('active');
-    slides[slideIndex].classList.add('active');
-    currentSlide = slideIndex;
+    else if (slideIndex >= 0){
+        slides[currentSlide].classList.remove('active');
+        slides[slideIndex].classList.add('active');
+        currentSlide = slideIndex;
+    }
 }
 
 function updateAgeCounter() {
