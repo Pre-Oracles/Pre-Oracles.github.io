@@ -140,6 +140,11 @@ const NowPage = ({ setCurrentPage }) => {
           <div className="shelf-wood-bottom"></div>
           <p className="bookshelf-footer-text">
             {window.innerWidth >= 768 ? 'Hover over books to preview • Click to pin open' : 'Tap books to read'} • Inspired by Derek Sivers' <a href="https://nownownow.com/about" target="_blank" rel="noopener noreferrer" className="bookshelf-link">now page movement</a>
+            <div class ="footer">
+            this page is written with React @2022 (now deprecated)
+            <br></br>
+            No rights reserved — this work by alex is free to use for any purpose.
+            </div>         
           </p>
         </div>
       </div>
