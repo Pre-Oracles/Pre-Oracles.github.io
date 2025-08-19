@@ -577,9 +577,9 @@
 .btn-now:hover::after {
   font-family: "WDXL Lubrifont SC", sans-serif;
   font-weight: 400;
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-style: normal;
-  letter-spacing:0.6em;
+  letter-spacing:0.5em;
   content: '时局图';
   position: fixed;
   top: 50vh;
@@ -598,9 +598,9 @@
 .btn-now:active::after {
   font-family: "WDXL Lubrifont SC", sans-serif;
   font-weight: 400;
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-style: normal;
-  letter-spacing:0.6em;
+  letter-spacing:0.5em;
   content: '时局图';
   position: fixed;
   top: 50vh;
