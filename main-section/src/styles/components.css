@@ -1,5 +1,4 @@
-/* Component Styles - styles/components.css */
-
+@import url('https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+SC&display=swap');
 /* Buttons */
 .btn-back {
   display: flex;
@@ -523,4 +522,119 @@
   padding: 2rem;
   font-size: 1.125rem;
   color: #666;
+}
+
+/* Now Button */
+.btn-now {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  border: 1px solid black;
+  background: white;
+  color: black;
+  cursor: pointer;
+  transition: all 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+  font-size: 0.875rem;
+  font-family: inherit;
+  border-radius: 0;
+  overflow: visible;
+  transform-origin: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  min-height: 40px;
+}
+
+.btn-now::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 70%, rgba(0, 0, 0, 0.4) 100%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.btn-now:hover::before {
+  width: 200vmax;
+  height: 200vmax;
+}
+
+.btn-now:active::before {
+  width: 200vmax;
+  height: 200vmax;
+  transition: all 2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn-now:hover::after {
+  font-family: "WDXL Lubrifont SC", sans-serif;
+  font-weight: 400;
+  font-size: 3.5rem;
+  font-style: normal;
+  letter-spacing:0.6em;
+  content: '时局图';
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  opacity: 0;
+  animation: fadeInText 1.5s ease-in-out 0.5s forwards;
+  pointer-events: none;
+}
+
+.btn-now:active::after {
+  font-family: "WDXL Lubrifont SC", sans-serif;
+  font-weight: 400;
+  font-size: 3.5rem;
+  font-style: normal;
+  letter-spacing:0.6em;
+  content: '时局图';
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  opacity: 0;
+  animation: fadeInText 2s ease-in-out 0.5s forwards;
+  pointer-events: none;
+}
+
+.btn-now:hover {
+  color: transparent;
+  border-color: transparent;
+  z-index: 999;
+}
+
+.btn-now:active {
+  color: transparent;
+  border-color: transparent;
+  z-index: 999;
+}
+
+@keyframes fadeInText {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
+  100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+@media (min-width: 768px) {
+  .btn-now {
+    top: 2rem;
+    right: 2rem;
+  }
 }
