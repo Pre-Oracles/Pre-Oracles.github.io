@@ -1,7 +1,10 @@
 import React from 'react';
-
+import NowButton  from './NowButton';
 const MainPage = ({ content, setCurrentPage }) => (
+  
   <div className="page-container">
+  <NowButton onClick={() => setCurrentPage('now')}/>
+    
     <div className="content-wrapper">
       <h1 class = "title-main">Welcome to Gao's Directory</h1>
       <p class = "title-sub">information still under relocation
