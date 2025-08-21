@@ -1,7 +1,10 @@
 export const getNowData = async () => {
-  // TODO: Replace with actual API call when ready
-  // const response = await fetch('/api/now');
-  // return response.json();
+  let consumingData;
+  try {
+    consumingData = await fetchNowDataFromAPI("https://pre-oracles.github.io/now.json");
+  } catch (e) {
+    consumingData = ["Error fetching data"];
+  }
   
   return {
     title: "What I'm up to now",
@@ -21,9 +24,8 @@ export const getNowData = async () => {
       },
       {
         title: "Currently Consuming",
-        content: [
-          fetchNowDataFromAPI("https://pre-oracles.github.io/now.json")
-        ]
+        content: consumingData
+        
       },
       {
         title: "Location",
