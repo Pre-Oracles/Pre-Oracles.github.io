@@ -66,5 +66,41 @@ function updateAgeCounter() {
         ageSpan.textContent = `${years} years, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
     }
 }
+
+let currentImageIndex = 0;
+const totalImages = 5;
+
+function rotateGallery(direction) {
+    const items = document.querySelectorAll('.gallery-item');
+    
+    currentImageIndex = (currentImageIndex + direction + totalImages) % totalImages;
+    
+    items.forEach(item => {
+        item.className = 'gallery-item';
+    });
+    
+    for (let i = 0; i < totalImages; i++) {
+        const item = items[i];
+        const relativePosition = (i - currentImageIndex + totalImages) % totalImages;
+        
+        if (relativePosition === 0) {
+            item.classList.add('center');
+        } else if (relativePosition === 1) {
+            item.classList.add('bottom');
+        } else if (relativePosition === totalImages - 1) {
+            item.classList.add('top');
+        } else if (relativePosition === totalImages - 2) {
+            item.classList.add('hidden');
+        } else {
+            item.classList.add('hidden-bottom');
+        }
+    }
+}
+
+setInterval(() => {
+    rotateGallery(-1);
+}, 4000);
+
+
 setInterval(updateAgeCounter, 1000);
 updateAgeCounter();
