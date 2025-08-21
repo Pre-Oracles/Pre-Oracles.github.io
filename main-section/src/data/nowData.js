@@ -44,12 +44,20 @@ export const fetchNowDataFromAPI = async (endpoint) => {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
+
     const data = await response.json();
-    return data;
-  } 
-  catch (error) {
-    console.error('Error fetching now data:', error);
-    return getNowData();
+    if (Array.isArray(data)) {
+      return data.map(String);
+    } else if (typeof data === "object" && data !== null) {
+      return Object.entries(data).map(([key, value]) => `${key}: ${value}`);
+    } else {
+      // For primitives
+      return [String(data)];
+    }
+  } catch (error) {
+    console.error("Error fetching now data:", error);
+    return ["Failed to load data"];
   }
 };
+
 
