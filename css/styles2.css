@@ -3,7 +3,8 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #fff;
-    overflow: hidden;
+    overflow-x: hidden; /* prevent sideways zoom/scroll */
+    -webkit-text-size-adjust: 100%; /* prevent iOS zoom */
 }
 
 main {
@@ -39,16 +40,18 @@ main {
 h2 {
     font-size: 24px;
     margin-bottom: 0.5em;
+    margin-right: 2em;
 }
 h3 {
     margin-bottom: 3px;
 }
 img {
-    width: 80%;
-    height: 80%;
-    max-width: 300px;
-    max-height: 300px;
-    object-fit: cover;
+    width: 90%; /* make images larger by default */
+    max-width: 400px; /* allow more room */
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 10px auto; /* ensure centered */
 }
 p {
     font-size: 16px;
@@ -201,20 +204,36 @@ image-gallery {
     background: #555;
 }
 
-/* Mobile responsiveness  */
+/* Mobile responsiveness */
 @media screen and (max-width: 768px) {
+    body, main {
+        text-align: center;
+        padding: 0 15px; /* balanced margin */
+        box-sizing: border-box;
+    }
+
+    img {
+        width: 95%; /* make images larger on mobile */
+        max-width: 95%;
+        height: auto;
+    }
+
+    main {
+        max-width: 100%; /* let it fill width on mobile */
+    }
+
     .row {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0 20px;
+        padding: 0 10px;
         box-sizing: border-box;
     }
     
     .column {
         float: none;
         width: 100%;
-        max-width: 400px;
+        max-width: 100%;
         margin-bottom: 20px;
     }
     
@@ -224,22 +243,22 @@ image-gallery {
     
     /* Mobile: Horizontal Gallery */
     .image-gallery {
-        height: 150px;
+        height: auto;
         width: 100%;
-        max-width: 350px;
+        max-width: 100%;
     }
     
     .gallery-container {
-        width: 320px;
-        height: 120px;
+        width: 100%;
+        height: auto;
         display: flex;
         align-items: center;
         justify-content: center;
     }
     
     .gallery-item {
-        height: 100px;
-        width: 80px;
+        height: auto;
+        width: 90%;
         left: 50%;
         top: 50%;
         transform-origin: center center;
@@ -275,4 +294,3 @@ image-gallery {
         z-index: 1;
     }
 }
-
