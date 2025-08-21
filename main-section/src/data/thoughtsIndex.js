@@ -15,6 +15,15 @@ export const thoughtsIndex = [
         readTime: "12 min read",
         tags: ["tech", "ML","DL","Transformers"],
         articleFile: () => import("./thoughts/dying_transformers.js")
+      },
+      {
+        title:"Winning the battle of Manzikert",
+        date: "2025-08-12",
+        expert: "The alternative history where Byzantium wins the battle of Manzikurt, and how different the timeline would stretch from it.",
+        image: "/resource/manzikert.jpg",
+        readTime: "10 min read",
+        tags: ["History", "Alternative History","Byzantium","Seljuks"],
+        articleFile: () => import("./thoughts/manzikurt_victory.js")
       }
   
 ];
