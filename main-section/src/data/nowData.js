@@ -20,16 +20,16 @@ export const getNowData = async () => {
         ]
       },
       {
-        title: "Consuming",
+        title: "Currently Consuming",
         content: [
-          "Book: Human zoo - Desmond Morris",
-          fetchNowDataFromAPI()
+          fetchNowDataFromAPI("https://pre-oracles.github.io/now.json")
         ]
       },
       {
         title: "Location",
         content: [
-          "Based in South Bay"
+          "San Jose, California",
+          "Home for the summer"
         ]
       }
     ]
