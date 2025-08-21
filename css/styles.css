@@ -204,6 +204,22 @@ image-gallery {
 
 /* Mobile responsiveness - keep your existing styles */
 @media screen and (max-width: 768px) {
+    /* Page padding + centering (mobile only) */
+    body {
+        padding: 0 20px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    /* Headings shouldn't be offset on mobile */
+    h2 { margin-right: 0; }
+
+    /* Center common blocks on mobile */
+    img, button, form {
+        display: block;
+        margin: 0 auto;
+    }
+
     .row {
         display: flex;
         flex-direction: column;
@@ -224,7 +240,7 @@ image-gallery {
     }
     
     /* Mobile: Horizontal Gallery */
-    .image-gallery {
+    image-gallery, .image-gallery {
         height: 150px;
         width: 100%;
         max-width: 350px;

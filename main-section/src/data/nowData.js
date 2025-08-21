@@ -20,9 +20,10 @@ export const getNowData = async () => {
         ]
       },
       {
-        title: "Reading",
+        title: "Consuming",
         content: [
-          "Human zoo - Desmond Morris"
+          "Book: Human zoo - Desmond Morris",
+          fetchNowDataFromAPI()
         ]
       },
       {
@@ -49,3 +50,4 @@ export const fetchNowDataFromAPI = async (endpoint) => {
     return getNowData();
   }
 };
+
