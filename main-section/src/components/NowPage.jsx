@@ -82,7 +82,7 @@ const NowPage = ({ setCurrentPage }) => {
           </button>
 
           <div className="bookshelf-title-section">
-            <h1 className="bookshelf-title">{nowData?.title || "What I'm up to now"}</h1>
+            <h1 className="bookshelf-title">{nowData.title}</h1>
             {nowData?.lastUpdated && (
               <p className="bookshelf-last-updated">
                 Last updated: {nowData.lastUpdated}

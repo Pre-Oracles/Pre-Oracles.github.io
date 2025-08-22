@@ -13,8 +13,7 @@ const ThoughtsPage = ({ data, setCurrentPage }) => {
     
     try {
       // Dynamically import the article content
-      const articleModule = await thoughtItem.articleFile();
-      setArticleContent(articleModule.article.content);
+      setArticleContent(thoughtItem.articleFile.content);
     } catch (error) {
       console.error('Error loading article:', error);
       setArticleContent('Error loading article content.');
@@ -46,7 +45,44 @@ const ThoughtsPage = ({ data, setCurrentPage }) => {
     }
   }, [selectedArticle]);
 
-  // Parse markdown-like content for basic formatting
+
+  const parseInlineFormatting = (text) => {
+      const parts = [];
+      let currentIndex = 0;
+      let key = 0;
+      
+      // Regular expression to find bold (*text*) and italic (^text^) patterns
+      const formatRegex = /(\*[^*]+\*|\^[^^]+\^)/g;
+      let match;
+      
+      while ((match = formatRegex.exec(text)) !== null) {
+        // Add text before the match
+        if (match.index > currentIndex) {
+          parts.push(text.slice(currentIndex, match.index));
+        }
+        
+        const matchedText = match[0];
+        const innerText = matchedText.slice(1, -1); // Remove surrounding markers
+        
+        if (matchedText.startsWith('*')) {
+          // Bold text
+          parts.push(<strong key={key++}>{innerText}</strong>);
+        } else if (matchedText.startsWith('^')) {
+          // Italic text
+          parts.push(<em key={key++}>{innerText}</em>);
+        }
+        
+        currentIndex = formatRegex.lastIndex;
+      }
+      
+      // Add remaining text
+      if (currentIndex < text.length) {
+        parts.push(text.slice(currentIndex));
+      }
+      
+      return parts.length > 1 ? parts : text;
+    };
+
   const formatContent = (content) => {
     if (!content) return null;
     
@@ -85,7 +121,7 @@ const ThoughtsPage = ({ data, setCurrentPage }) => {
         }
         
         // Regular paragraphs
-        return <p key={index} className="article-paragraph">{line}</p>;
+        return <p key={index} className="article-paragraph">{parseInlineFormatting(line)}</p>;
       });
   };
 
