@@ -90,11 +90,24 @@ export const content = {
   thoughts: {
     title: "Thoughts",
     content: thoughtsIndex,
-    previewImage: getLatestThought().image
+    previewImage: "/resources/yatsen.jpg"
+    //getLatestThought().image
   },
   quotes: {
     title: "Quotes",
     content: [
+      {
+        quote: "Power is a lot like real estate. It's all about location location location. The closer you are to the source, the higher your property value.",
+        author: "Frank Underwood, House of Cards"
+      },
+      {
+        quote: "Hell is other people",
+        author: "Sartre, No Exit"
+      },
+      {
+        quote:"You can't have a revolution without a few heads rolling.",
+        author: "John Paradox (alias), Europe Universalis IV"
+      },
       {
         quote: "Capital has the ability to subsume all critiques into itself. Even those who would *critique* capital end up *reinforcing* it instead...", 
         author: "Joyce Messier, from the video game Disco Elysium (Inspired by Herbert Marcuse)" 
