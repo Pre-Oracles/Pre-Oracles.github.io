@@ -28,10 +28,10 @@ export const getNowData = async () => {
         
       },
       {
-        title: "Location",
+        title: "Currently At",
         content: [
           "San Jose, California",
-          "Home for the summer"
+          "Why I'm here: Home for the summer"
         ]
       }
     ]
