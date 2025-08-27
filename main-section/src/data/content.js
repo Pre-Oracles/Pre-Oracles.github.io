@@ -97,6 +97,10 @@ export const content = {
     title: "Quotes",
     content: [
       {
+        quote: "History is rarely about what actually happened but more about how events are interpreted.",
+        author: "Paul Markham on De Re Militari"
+      },
+      {
         quote: "Power is a lot like real estate. It's all about location location location. The closer you are to the source, the higher your property value.",
         author: "Frank Underwood, House of Cards"
       },
