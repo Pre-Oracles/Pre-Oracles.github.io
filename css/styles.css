@@ -40,6 +40,12 @@ h2 {
     font-size: 24px;
     margin-bottom: 0.5em;
 }
+
+@media screen and (min-width: 769px) {
+    .left h2 {
+        padding-right: 2em;
+    }
+}
 h3 {
     margin-bottom: 3px;
 }
@@ -68,8 +74,7 @@ p {
     width: 16em;
 }
 .left {
-    text-align: center;
-    
+    text-align: center; 
 }
 .right {
     text-align: left;
@@ -202,21 +207,13 @@ image-gallery {
     background: #555;
 }
 
-@media screen and (min-width: 769px) {
-    .left h2 {
-        padding-right: 2em;
-    }
-}
 /* Mobile responsiveness  */
 @media screen and (max-width: 768px) {
-    h2{
-        margin-right: 0em; 
-    }
     .row {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0 20px;
+        padding: 0 10px; 
         box-sizing: border-box;
     }
     
@@ -224,34 +221,54 @@ image-gallery {
         float: none;
         width: 100%;
         max-width: 400px;
-        margin-bottom: 20px;
+        margin-bottom: 8px; 
     }
     
     .left, .right {
         text-align: center;
     }
     
-    /* Mobile: Horizontal Gallery - Centered and Moderately Enlarged */
+    
+    h2 {
+        font-size: 20px; 
+        margin-bottom: 0.2em;  
+        margin-top: 0.2em;     }
+    
+    h3 {
+        margin-bottom: 1px; 
+        margin-top: 5px; 
+        font-size: 16px; 
+    }
+    
+    p {
+        font-size: 14px; 
+        margin-top: 0px; 
+        margin-bottom: 0px; 
+        line-height: 1.2; 
+    }
+    
     .image-gallery {
-        height: 170px; /* Moderate increase for better screen usage */
+        height: 140px; 
         width: 100%;
-        max-width: 100%; /* Removed width restriction */
+        max-width: 100%; 
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 5px; 
+        margin-top: 5px; 
     }
     
     .gallery-container {
-        width: 360px; /* Moderate increase from 320px */
-        height: 135px; /* Moderate increase from 120px */
+        width: 360px; 
+        height: 125px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
     
     .gallery-item {
-        height: 110px; /* Moderate increase from 100px */
-        width: 90px; /* Moderate increase from 80px */
+        height: 100px; 
+        width: 85px; 
         left: 50%;
         top: 50%;
         transform-origin: center center;
