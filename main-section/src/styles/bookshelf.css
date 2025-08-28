@@ -413,7 +413,6 @@
   color: #999;
 }
 
-/* Update book color variables to be more monochromatic */
 .book:nth-child(1) {
   --book-color: #2a2a2a;
   --book-spine-color: #1a1a1a;
