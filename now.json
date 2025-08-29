@@ -1,6 +1,18 @@
 {
-  "listening": "高级动物 - 窦唯 ",
-  "reading": "Sartre (in English), Marcuse (in English)",
-  "watching": "none at the moment",
-  "playing": "EU4, nba 2k series"
+  "working":{
+    "1": "Getting better at simply writing interestingly, intuitively",
+    "2": "Learning Rust",
+    "3": "A detailed, map viewing simulator as a precursor to my own grand strategy game."
+        
+  },
+  "consuming":{
+    "listening": "高级动物 - 窦唯 ",
+    "reading": "Sartre (in English), Marcuse (in English)",
+    "watching": "none at the moment",
+    "playing": "EU4, nba 2k series"
+  },
+  "location":{
+    "Location":"San Jose, California",
+    "Why I'm here": "Home for the summer"
+  }
 }

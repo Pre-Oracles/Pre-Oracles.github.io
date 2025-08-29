@@ -47,18 +47,16 @@ const NowPage = ({ setCurrentPage }) => {
 
   const handleBookClick = (index) => {
     if (selectedBook === index && isBookFixed) {
-      // Clicking the same book when fixed - unfix it
       setSelectedBook(null);
       setIsBookFixed(false);
     } else {
-      // Click new book or fix current hover
       setSelectedBook(index);
       setIsBookFixed(true);
     }
   };
 
   const handleContentClick = (e) => {
-    e.stopPropagation(); // Prevent closing when clicking on content
+    e.stopPropagation(); 
   };
 
   const handleBackgroundClick = (e) => {
@@ -125,9 +123,9 @@ const NowPage = ({ setCurrentPage }) => {
               <div className="open-book">
                 <h2 className="book-content-title">{nowData.sections[selectedBook].title}</h2>
                 <div className="book-content-text">
-                  {nowData.sections[selectedBook].content.map((item, itemIndex) => (
+                  {Object.entries(nowData.sections[selectedBook].content).map(([key, value], itemIndex) => (
                     <p key={itemIndex} className="book-content-item">
-                      {item}
+                      <strong>{key}:</strong> {value}
                     </p>
                   ))}
                 </div>
