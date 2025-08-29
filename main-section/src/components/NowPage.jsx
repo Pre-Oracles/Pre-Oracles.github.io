@@ -123,11 +123,19 @@ const NowPage = ({ setCurrentPage }) => {
               <div className="open-book">
                 <h2 className="book-content-title">{nowData.sections[selectedBook].title}</h2>
                 <div className="book-content-text">
-                  {Object.entries(nowData.sections[selectedBook].content).map(([key, value], itemIndex) => (
-                    <p key={itemIndex} className="book-content-item">
-                      <strong>{key}:</strong> {value}
-                    </p>
-                  ))}
+                  {Array.isArray(nowData.sections[selectedBook].content) ? (
+                    nowData.sections[selectedBook].content.map((item, itemIndex) => (
+                      <p key={itemIndex} className="book-content-item">
+                        {item}
+                      </p>
+                    ))
+                  ) : (
+                    Object.entries(nowData.sections[selectedBook].content).map(([key, value], itemIndex) => (
+                      <p key={itemIndex} className="book-content-item">
+                        <strong>{key}:</strong> {value}
+                      </p>
+                    ))
+                  )}
                 </div>
               </div>
             </div>
