@@ -3,7 +3,11 @@ export const getNowData = async () => {
   try {
     data = await fetchNowDataFromAPI("https://pre-oracles.github.io/now.json");
   } catch (e) {
-    data = ["Error fetching data"];
+    data = {
+      working: { "Error": "Failed to load working data" },
+      consuming: { "Error": "Failed to load consuming data" },
+      location: { "Error": "Failed to load location data" }
+    };
   }
   
   return {
@@ -16,16 +20,15 @@ export const getNowData = async () => {
     sections: [
       {
         title: "Currently Working On",
-        content: data["working"]
+        content: data.working || { "Error": "No working data available" }
       },
       {
         title: "Currently Consuming",
-        content: data["consuming"]
-        
+        content: data.consuming || { "Error": "No consuming data available" }
       },
       {
         title: "Currently At",
-        content: data["location"]
+        content: data.location || { "Error": "No location data available" }
       }
     ]
   };
@@ -39,18 +42,9 @@ export const fetchNowDataFromAPI = async (endpoint) => {
     }
 
     const data = await response.json();
-    if (Array.isArray(data)) {
-      return data.map(String);
-    } else if (typeof data === "object" && data !== null) {
-      return Object.entries(data).map(([key, value]) => `${key}: ${value}`);
-    } else {
-      // For primitives
-      return [String(data)];
-    }
+    return data; // Return the parsed JSON data directly
   } catch (error) {
     console.error("Error fetching now data:", error);
-    return ["Failed to load data"];
+    throw error; // Re-throw the error so it can be caught in getNowData
   }
 };
-
-
