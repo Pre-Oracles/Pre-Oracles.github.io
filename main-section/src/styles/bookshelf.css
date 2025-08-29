@@ -379,17 +379,7 @@
   border: 1px solid #222;
 }
 
-.shelf-wood-bottom::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.3) 50%, transparent 100%);
-  border-radius: 1px;
-}
+
 
 .bookshelf-footer-text {
   font-size: 0.875rem;

@@ -30,6 +30,7 @@ export const thoughtsIndex = [
       { 
         title: "The Future of AI Agents", 
         date: "2024-08-01", 
+        image: "/resources/ai_agent.png",
         excerpt: "It is not just going to be transformers, because whenever a technology is only being slightly refined under heavy competition, it suggest the end is near for it (even if it takes 50 years), new paradigms, new technology will emerge eventually and overtake transformers like how they overtook the CNNs and their predecessors. " ,
         readTime: calculateReadTime(AI),
         tags: ["tech", "ML","DL","Transformers"],

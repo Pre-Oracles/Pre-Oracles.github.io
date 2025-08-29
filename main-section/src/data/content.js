@@ -97,7 +97,7 @@ export const content = {
     title: "Quotes",
     content: [
       {
-        quote: "History is rarely about what actually happened but more about how events are interpreted.",
+        quote: "History... is very rarely about what actually happened but more about how events are interpreted.",
         author: "Paul Markham on De Re Militari"
       },
       {
