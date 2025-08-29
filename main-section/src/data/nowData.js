@@ -1,9 +1,9 @@
 export const getNowData = async () => {
-  let consumingData;
+  let data;
   try {
-    consumingData = await fetchNowDataFromAPI("https://pre-oracles.github.io/now.json");
+    data = await fetchNowDataFromAPI("https://pre-oracles.github.io/now.json");
   } catch (e) {
-    consumingData = ["Error fetching data"];
+    data = ["Error fetching data"];
   }
   
   return {
@@ -16,23 +16,16 @@ export const getNowData = async () => {
     sections: [
       {
         title: "Currently Working On",
-        content: [
-          "Getting better at simply writing interestingly, intuitively",
-          "Learning Rust",
-          "A detailed, map viewing simulator as a precursor to my own grand strategy game."
-        ]
+        content: data["working"]
       },
       {
         title: "Currently Consuming",
-        content: consumingData
+        content: data["consuming"]
         
       },
       {
         title: "Currently At",
-        content: [
-          "San Jose, California",
-          "Why I'm here: Home for the summer"
-        ]
+        content: data["location"]
       }
     ]
   };
