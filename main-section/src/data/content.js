@@ -54,7 +54,7 @@ export const content = {
           "/resources/julia_set2.png"
         ],
         liveDemo: "./JuliaSetFractal/",
-        github: "https://github.com/Pre-Oracles/JuliaSetFractal"
+        github: "https://github.com/alexgaoth/JuliaSetFractal"
       },
       { 
         name: "Political Speech Classifier", 
@@ -82,7 +82,7 @@ export const content = {
           "/resources/this_website.png",
           "/resources/journey2.png"
         ], 
-        github: "https://github.com/Pre-Oracles/Pre-Oracles.github.io"
+        github: "https://github.com/alexgaoth/alexgaoth.github.io"
       }
     ],
     previewImage: "/resources/julia_set.png"
