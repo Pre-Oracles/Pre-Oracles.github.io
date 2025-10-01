@@ -53,7 +53,7 @@ export const content = {
           "/resources/julia_set1.png",
           "/resources/julia_set2.png"
         ],
-        liveDemo: "./JuliaSetFractal/",
+        liveDemo: "../JuliaSetFractal/",
         github: "https://github.com/alexgaoth/JuliaSetFractal"
       },
       { 
