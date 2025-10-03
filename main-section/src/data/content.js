@@ -82,7 +82,7 @@ export const content = {
           "/resources/this_website.png",
           "/resources/journey2.png"
         ], 
-        liveDemo: "#",
+        liveDemo: "",
         github: "https://github.com/alexgaoth/alexgaoth.github.io"
       }
     ],
