@@ -7,8 +7,11 @@ const ResumePage = ({ data, setCurrentPage }) => (
       <BackButton setCurrentPage={setCurrentPage} />
 
       <h1 className="title-page">Resume</h1>
-
-      <div className="space-y-large">
+      <p className='mb-small'>
+            To view my proper resume here: {" "}
+            <a href = "/resume.pdf" target="_blank" rel="noopener noreferrer"> view resume</a>
+          </p>
+      <div className="space-y-large">     
         <section>
           <h2 className="title-section">Experience</h2>
           {data.content.experience.map((job, index) => (
