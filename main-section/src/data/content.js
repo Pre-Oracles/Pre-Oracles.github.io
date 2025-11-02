@@ -57,6 +57,14 @@ export const content = {
         github: "https://github.com/alexgaoth/JuliaSetFractal"
       },
       { 
+        name: "UCSD Crimes log tracker", 
+        tech: "Python, React+Vite, Node.js, Selenium", 
+        description: "alerting, scraping, hosting Crimes reported in UCSD",
+        image:"/resources/ucsd_crimes.png",
+        liveDemo: "../UCSD_Crimes/",
+        github: "https://github.com/alexgaoth/UCSD_Crimes"
+      },
+      { 
         name: "Political Speech Classifier", 
         tech: "Python, Matrices", 
         description: "Encoder-Only model which classify the enter political speech into the political party in the US.",
