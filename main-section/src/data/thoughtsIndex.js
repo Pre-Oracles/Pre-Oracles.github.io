@@ -1,6 +1,7 @@
 import { article as china } from "./thoughts/china_modernisation.js";
 import { article as AI} from "./thoughts/dying_transformers.js";
 import { article as manzikert} from "./thoughts/manzikurt_victory.js";
+import { article as symbolic_order} from "./thoughts/symbolic_order.js";
 
 function calculateReadTime(article) {
   const words = article.content.trim().split(/\s+/).length;
@@ -9,6 +10,15 @@ function calculateReadTime(article) {
 }
 
 export const thoughtsIndex = [
+  {
+      title:"Submitting to the Symbolic Order",
+      date: "2025-11-1",
+      excerpt: "Attempt at deconstructing Lacan's theory of symbolic_order",
+      image: "/resources/symbolic_order.jpg",
+      readTime: calculateReadTime(symbolic_order),
+      tags: ["Philosphoy", "Psychoanalysis", "Lacan", "Zizek"],
+      articleFile: symbolic_order
+    },
     {
       title:"Winning the battle of Manzikert",
       date: "2025-08-12",
