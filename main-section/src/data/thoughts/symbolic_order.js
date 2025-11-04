@@ -2,7 +2,7 @@ export const article = {
 
 content:`
 
-##When we see through the fictitious part of an order/structure, our soberness makes us more loyal to the lies of this order.
+##When we see through the fictitious part of an order/structure, our soberness makes us more loyal to the lies of this order.##
 
 Symbolic order, according to Lacan, is a system consistent by languages, law and societal norms, reinforced by oppression to build order and meaning. Though this is a simplification of his theory, this system he describes could be vividly explain the reasons behind our modern action.
 

@@ -4,7 +4,7 @@ const NowButton = ({ onClick }) => {
   const [isAnimating, setIsAnimating] = useState(false);
   const buttonRef = useRef(null);
 
-  const updateGradientOrigin = useCallback((e) => {
+  const updateGradientOrigin = useCallback(() => {
     if (!buttonRef.current) return;
     
     const button = buttonRef.current;
@@ -19,19 +19,26 @@ const NowButton = ({ onClick }) => {
     button.style.setProperty('--offset-y', `${buttonCenterY}px`);
   }, []);
 
-  const handleMouseEnter = useCallback((e) => {
-    updateGradientOrigin(e);
+  const handleMouseEnter = useCallback(() => {
+    updateGradientOrigin();
   }, [updateGradientOrigin]);
 
-  const handleClick = useCallback((e) => {
+  const handleClick = useCallback(() => {
     if (isAnimating) return; 
     
-    updateGradientOrigin(e);
-    setIsAnimating(true);
-    setTimeout(() => {
-      onClick();
-      setIsAnimating(false);
-    }, 1800); 
+    // Update gradient origin immediately
+    updateGradientOrigin();
+    
+    // Use double requestAnimationFrame to ensure CSS variables are applied before animation
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        setIsAnimating(true);
+        setTimeout(() => {
+          onClick();
+          setIsAnimating(false);
+        }, 1800);
+      });
+    });
   }, [isAnimating, onClick, updateGradientOrigin]);
 
   return (

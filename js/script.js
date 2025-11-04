@@ -1,10 +1,16 @@
 const slides = document.querySelectorAll('.slide');
 let currentSlide = 0;
 
+// Navigation hints for mobile
+let hasSeenFirstSlide = false;
+let hasSeenSecondSlide = false;
+let downHint = null;
+let upHint = null;
+
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowUp' && currentSlide > 0) {
+    if ((e.key === 'ArrowUp' || e.key === 'ArrowLeft') && currentSlide > 0) {
         showSlide(currentSlide - 1);
-    } else if (e.key === 'ArrowDown' ) {
+    } else if ((e.key === 'ArrowDown' || e.key === 'ArrowRight')) {
         showSlide(currentSlide + 1);
     }
 });
@@ -38,10 +44,76 @@ function showSlide(slideIndex) {
         location.href = './main-section/';
     }
     else if (slideIndex >= 0){
-        slides[currentSlide].classList.remove('active');
+        // Mark slides as seen before transition
+        if (currentSlide === 0) {
+            hasSeenFirstSlide = true;
+        }
+        if (currentSlide === 1) {
+            hasSeenSecondSlide = true;
+        }
+        
+        // Moving forward (down)
+        if (slideIndex > currentSlide) {
+            slides[currentSlide].classList.remove('active');
+            slides[currentSlide].classList.add('passed');
+        }
+        // Moving backward (up)
+        else if (slideIndex < currentSlide) {
+            slides[currentSlide].classList.remove('active');
+            slides[slideIndex].classList.remove('passed');
+        }
+        
         slides[slideIndex].classList.add('active');
         currentSlide = slideIndex;
+        
+        // Update hints after transition
+        updateHints();
     }
+}
+
+// Function to manage hints visibility
+function updateHints() {
+    if (!downHint || !upHint) return;
+    
+    if (currentSlide === 0 && !hasSeenFirstSlide) {
+        downHint.classList.add('visible');
+    } else {
+        downHint.classList.remove('visible');
+    }
+    
+    if (currentSlide === 1 && !hasSeenSecondSlide) {
+        upHint.classList.add('visible');
+    } else {
+        upHint.classList.remove('visible');
+    }
+}
+
+// Create navigation hints for mobile
+if (window.innerWidth <= 768) {
+    // Create down arrow hint for first slide
+    downHint = document.createElement('div');
+    downHint.className = 'nav-hint nav-hint-down';
+    downHint.innerHTML = `
+        <span>scroll this way to continue</span>
+        <span class="arrow-icon">↓</span>
+    `;
+    document.body.appendChild(downHint);
+    
+    // Create up arrow hint for second slide
+    upHint = document.createElement('div');
+    upHint.className = 'nav-hint nav-hint-up';
+    upHint.innerHTML = `
+        <span class="arrow-icon">↑</span>
+        <span>go back this way</span>
+    `;
+    document.body.appendChild(upHint);
+    
+    // Show down hint on first slide after a delay
+    setTimeout(() => {
+        if (currentSlide === 0) {
+            downHint.classList.add('visible');
+        }
+    }, 500);
 }
 
 function updateAgeCounter() {

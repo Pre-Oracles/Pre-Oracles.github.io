@@ -549,6 +549,11 @@
   justify-content: center;
   min-width: 60px;
   min-height: 40px;
+  /* Set initial CSS variables to prevent undefined state */
+  --mouse-x: 50vw;
+  --mouse-y: 50vh;
+  --offset-x: 50vw;
+  --offset-y: 50vh;
 }
 
 .btn-now::before {
@@ -558,22 +563,22 @@
   left: 0;
   width: 0;
   height: 0;
-  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 70%, rgba(0, 0, 0, 0.4) 100%);
+  background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 70%, rgba(0, 0, 0, 0.4) 100%);
   border-radius: 50%;
-  transform: translate(var(--offset-x, 0), var(--offset-y, 0));
+  transform: translate(var(--offset-x), var(--offset-y));
   transition: all 1.5s cubic-bezier(0.23, 1, 0.32, 1);
   z-index: -1;
   pointer-events: none;
 }
 
 .btn-now:hover::before,
-.btn-now:active::before {
+.btn-now.animating::before {
   width: 300vmax;
   height: 300vmax;
-  transform: translate(calc(var(--offset-x, 0) - 150vmax), calc(var(--offset-y, 0) - 150vmax));
+  transform: translate(calc(var(--offset-x) - 150vmax), calc(var(--offset-y) - 150vmax));
 }
 
-.btn-now:active::before {
+.btn-now.animating::before {
   transition: all 2s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -597,7 +602,7 @@
   pointer-events: none;
 }
 
-.btn-now:active::after {
+.btn-now.animating::after {
   font-family: "WDXL Lubrifont SC", sans-serif;
   font-weight: 400;
   font-size: 3rem;
@@ -618,7 +623,7 @@
 }
 
 .btn-now:hover,
-.btn-now:active {
+.btn-now.animating {
   color: transparent;
   border-color: transparent;
   z-index: 999;

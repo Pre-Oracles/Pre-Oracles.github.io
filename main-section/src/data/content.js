@@ -6,37 +6,66 @@ export const content = {
     content: {
       experience: [
         { 
-          role: "Full-Stack Developer", 
-          company: "self-employed", 
-          period: "2020-Now", 
-          description: "Learn and utilize new and interesting skills out there, combining them into projects that can been seen in the \"things i've made section\"" 
+          role: "Software & DevOps Intern", 
+          company: "Climind, San Francisco", 
+          period: "May 2024 - August 2025", 
+          description: "Built and deployed a web crawler that collected ESG reporting data and bond information, producing over 100,000 tokens to enhance Climind's language model training. Contributed to the improvement of Climind's LLM by supporting data quality, model performance, and workflow optimization. Applied DevOps practices: Containerization (docker), CI/CD pipeline to ensure efficient and reliable development processes." 
         },
         { 
-          role: "Intern", 
-          company: "Climind", 
-          period: "2023-2024", 
-          description: "Developed scripts to obtain open & high value data for the Climind AI." 
+          role: "Lead Developer and Marketing Director", 
+          company: "Radians, London", 
+          period: "August 2023 - April 2024", 
+          description: "Designed and deployed a full-stack website using React, Node.js, and MongoDB, providing an online presence for the company's physical product. Implemented a customer support system by integrating email workflows (Gmail/SMTP) and a call chain (VoIP), improving response times and client engagement. Directed marketing initiatives, including social media campaigns and digital outreach, to promote the product and grow visibility." 
         }
       ],
-      skills: ["JavaScript", "React", "Node.js", "Python", "CSS", "HTML", "(Native) Chinese", "(Work Professiency) Tamil"],
+      skills: [
+        "React", 
+        "JavaScript", 
+        "HTML+CSS", 
+        "Node.js", 
+        "Flask", 
+        "Python", 
+        "Rust", 
+        "MySQL", 
+        "MongoDB", 
+        "C# (Unity)", 
+        "Godot",
+        "Critical thinking",
+        "Time management",
+        "Leadership",
+        "Teamwork",
+        "English (Native)",
+        "Chinese (Native)"
+      ],
       education: [
         { 
-          degree: "Math-CS undergraduate degree", 
-          institution: "UCSD", 
-          year: "2025-2029" 
+          degree: "Bachelor's degree in Math-CS", 
+          institution: "UC San Diego", 
+          year: "Class of 2029 (Projected to Graduate in 2028)" 
         },
         { 
-          degree: "A-Levels", 
-          institution: "St Pauls School", 
+          degree: "A-Levels: Double Math, Physics, Computer Science (A*A*A*A)", 
+          institution: "St Paul's, London", 
           year: "2023-2025" 
         },
         {
-          degree: "GCSEs",
-          institution: "Caterham School",
+          degree: "GCSEs (999999987)",
+          institution: "Caterham School, Surrey",
           year: "2020-2023"
         }
+      ],
+      achievements: [
+        {
+          title: "Gold Medal",
+          organization: "British Informatics Olympiads",
+          year: "2025"
+        },
+        {
+          title: "Gold Medal",
+          organization: "British Mathematical Olympiad I",
+          year: "2024"
+        }
       ]
-      
     },
     previewImage: "/resources/resume.jpg"
   },

@@ -47,9 +47,9 @@ const ResumePage = ({ data, setCurrentPage }) => (
               <p className="text-gray">{study_experience.year}</p>
             </div>
             ))}
-            
           </div>
         </section>
+
       </div>
     </div>
   </div>
