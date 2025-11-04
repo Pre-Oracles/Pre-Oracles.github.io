@@ -41,7 +41,7 @@ body {
 .title-main {
   font-size: 2.25rem;
   font-weight: bold;
-  margin-bottom: 0.2 rem;
+  margin-bottom: 0.2rem;
   text-align: center;
 }
 
@@ -52,7 +52,7 @@ body {
 }
 
 @media (min-width: 769px) {
-  .title-sub {
+  .hidden{
     visibility: hidden;
   }
 }

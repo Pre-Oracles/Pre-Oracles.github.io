@@ -6,11 +6,13 @@ const MainPage = ({ content, setCurrentPage }) => (
   <NowButton onClick={() => setCurrentPage('now')}/>
     
     <div className="content-wrapper">
-      <h1 class = "title-main">Welcome to Gao's Directory</h1>
-      <p class = "title-sub">information still under relocation
-      <br></br>
-      also, if you're on mobile, try holding on the sections to press them.
-      </p>
+      <h1 class = "title-main">this is alex's directory</h1>
+      <div class = "title-sub">
+        <p>known around also as gao, alexgaoth</p>
+        <p>have a look around, there be something that interests u</p>
+      
+      <p class = "hidden">since ur on mobile, try holding on the sections to press them. </p>
+      </div>
       
       <div className="grid-2col">
         {Object.entries(content).map(([key, data]) => (

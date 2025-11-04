@@ -1,0 +1,19 @@
+# robots.txt for alexgaoth.github.io
+
+User-agent: *
+Allow: /
+
+# Block development and build files
+Disallow: /node_modules/
+Disallow: /main-section/node_modules/
+Disallow: /main-section/src/
+Disallow: /.git/
+Disallow: /main-section/build/
+
+# Allow CSS and JS for proper rendering
+Allow: /css/
+Allow: /js/
+Allow: /main-section/static/
+
+# Sitemap location
+Sitemap: https://alexgaoth.github.io/sitemap.xml
