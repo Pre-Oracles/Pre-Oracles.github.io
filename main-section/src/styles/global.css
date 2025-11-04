@@ -1,6 +1,6 @@
 /* Global Styles - styles/global.css */
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 /* Reset and Base Styles */
 * {
   margin: 0;
@@ -39,7 +39,10 @@ body {
 
 /* Typography */
 .title-main {
-  font-size: 2.25rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 0.2rem;
   text-align: center;

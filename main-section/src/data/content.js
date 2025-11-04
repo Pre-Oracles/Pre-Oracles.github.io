@@ -30,10 +30,6 @@ export const content = {
         "MongoDB", 
         "C# (Unity)", 
         "Godot",
-        "Critical thinking",
-        "Time management",
-        "Leadership",
-        "Teamwork",
         "English (Native)",
         "Chinese (Native)"
       ],
