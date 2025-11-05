@@ -7,12 +7,12 @@ import { Helmet } from 'react-helmet-async';
  * Wrap your app with: import { HelmetProvider } from 'react-helmet-async';
  */
 
-const SEO = ({ 
+const SEO = ({
   title = "Alex Gao's Portfolio",
   description = "Portfolio of Alex Gao: Math-CS student at UCSD, full-stack developer, and DevOps enthusiast.",
   keywords = "Alex Gao, Portfolio, UCSD, Full-Stack Developer, React, Python",
-  image = "https://alexgaoth.github.io/main-section/logo.jpg",
-  url = "https://alexgaoth.github.io/main-section/",
+  image = "https://alexgaoth.com/main-section/logo.jpg",
+  url = "https://alexgaoth.com/main-section/",
   type = "website"
 }) => {
   return (
