@@ -1,4 +1,4 @@
-# robots.txt for alexgaoth.github.io
+# robots.txt for alexgaoth.com
 
 User-agent: *
 Allow: /
@@ -16,4 +16,4 @@ Allow: /js/
 Allow: /main-section/static/
 
 # Sitemap location
-Sitemap: https://alexgaoth.github.io/sitemap.xml
+Sitemap: https://alexgaoth.com/sitemap.xml
