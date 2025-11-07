@@ -314,6 +314,10 @@ image-gallery {
 
 /* Mobile Navigation Hints */
 @media screen and (max-width: 768px) {
+    .slide {
+        height: calc(100vh - 60px); 
+        top: 0;
+    }
     .nav-hint {
         position: fixed;
         display: flex;
