@@ -1,7 +1,7 @@
 export const getNowData = async () => {
   let data;
   try {
-    data = await fetchNowDataFromAPI("https://alexgaoth.github.io/now.json");
+    data = await fetchNowDataFromAPI("https://alexgaoth.com/now.json");
   } catch (e) {
     data = {
       working: { "Error": "Failed to load working data" },
